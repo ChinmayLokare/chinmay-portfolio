@@ -2,6 +2,7 @@ import SectionHeader from '../components/SectionHeader';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, FileText } from 'lucide-react';
 import devdocImg from '../assets/frontend-demo.png';
+import rlcb from "../assets/rl-cb.png"
 import { Reveal } from '../components/Reveal';
 
 interface Project {
@@ -27,9 +28,9 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
             <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
         </div>
 
-        <div className="p-6">
+        <div className="p-6 flex flex-col flex-grow">
             <h3 className="text-xl font-bold text-slate-100 mb-3 group-hover:text-primary transition-colors">{project.title}</h3>
-            <p className="text-slate-400 text-sm mb-4 line-clamp-3">
+            <p className="text-slate-400 text-sm mb-4 line-clamp-3 group-hover:line-clamp-none transition-all duration-500">
                 {project.desc}
             </p>
 
@@ -88,24 +89,25 @@ const Projects = () => {
             desc: "Distributed system for NLP tasks. Achieved 85.71% accuracy on CommitmentBank dataset with privacy-preserving model training across nodes.",
             tech: ["Java", "Spring Boot", "PyTorch", "gRPC", "AWS EC2"],
             github: "#",
-            paper: "#",
+            // paper: "#",
             image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800"
         },
         {
             title: "RL Circuit Breaker",
             desc: "Adaptive circuit breaker for microservices using reinforcement learning. Achieved 88.9% success rate in extreme failure scenarios.",
             tech: ["Python", "RL", "Microservices", "Spring Boot"],
-            github: "#",
-            image: "https://images.unsplash.com/photo-1518433278985-359f1f0e2101?auto=format&fit=crop&q=80&w=800"
+            github: "https://github.com/ChinmayLokare/Reinforcement-Learning-Circuit-Breaker",
+            demo: "https://reinforcement-learning-circuit-breake.netlify.app/",
+            image: rlcb
         }
     ];
 
     return (
-        <section id="projects" className="py-24 max-w-7xl mx-auto px-6 lg:px-12 scroll-mt-20">
+        <section id="projects" className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-20">
             <Reveal>
                 <SectionHeader
                     title="Projects"
-                    subtitle="A collection of systems I've built in distributed computing and AI."
+                    subtitle="A collection of systems I've built."
                 />
             </Reveal>
 

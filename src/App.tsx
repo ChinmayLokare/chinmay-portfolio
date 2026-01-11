@@ -44,9 +44,9 @@ function App() {
                             <div id="home"><Hero /></div>
                             <Suspense fallback={<div className="h-20" />}>
                                 <About />
+                                <Experience />
                                 <Skills />
                                 <Projects />
-                                <Experience />
                                 <Contact />
                             </Suspense>
                         </main>

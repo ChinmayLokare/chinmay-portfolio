@@ -5,11 +5,11 @@ const Footer = () => {
         <footer className="py-12 border-t border-slate-800">
             <div className="max-w-7xl mx-auto px-4 flex flex-col items-center">
                 <div className="flex gap-6 mb-4">
-                    <a href="#"
+                    <a href="https://github.com/ChinmayLokare"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-slate-400 hover:text-primary"><Github size={20} /></a>
-                    <a href="#"
+                    <a href="https://www.linkedin.com/in/chinmaylokare/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-slate-400 hover:text-primary"><Linkedin size={20} /></a>

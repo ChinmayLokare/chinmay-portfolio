@@ -6,55 +6,63 @@ import { motion } from 'framer-motion';
 const Contact = () => {
     const contactMethods = [
         {
-            icon: <Mail className="text-primary" size={32} />,
+            icon: <Mail size={32} />,
             label: "Email",
             value: "chinmaylokare9@gmail.com",
             href: "mailto:chinmaylokare9@gmail.com"
         },
         {
-            icon: <Linkedin className="text-primary" size={32} />,
+            icon: <Linkedin size={32} />,
             label: "LinkedIn",
             value: "Connect with me",
-            href: "https://linkedin.com/in/yourprofile"
+            href: "https://www.linkedin.com/in/chinmaylokare/"
         },
         {
-            icon: <Github className="text-primary" size={32} />,
+            icon: <Github size={32} />,
             label: "GitHub",
             value: "Check out my code",
-            href: "https://github.com/yourusername"
+            href: "https://github.com/ChinmayLokare"
         }
     ];
 
     return (
-        <section id="contact" className="py-24 px-4 max-w-7xl mx-auto scroll-mt-20">
+        <section id="contact" className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-20">
             <Reveal>
                 <div className="text-center mb-16">
                     <SectionHeader title="Get In Touch" />
-                    <p className="text-slate-400 text-lg max-w-2xl mx-auto mt-4">
+                    <p className="text-slate-400 text-lg max-w-2xl mx-auto mt-4 leading-relaxed">
                         I'm currently seeking **Summer 2026 SDE/MLE internship** opportunities.
-                        Whether you have a question or just want to say hi, my inbox is always open!
+                        Let's connect and discuss how I can contribute to your team.
                     </p>
                 </div>
             </Reveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Increased gap and added padding to the top to prevent clipping during "lift" */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-4">
                 {contactMethods.map((method, idx) => (
                     <Reveal key={idx} delay={idx * 0.1}>
                         <motion.a
                             href={method.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            whileHover={{ y: -10, rotate: -1 }}
-                            className="flex flex-col items-center p-8 bg-slate-900/50 border border-slate-800 rounded-2xl group transition-all hover:border-primary/50"
+                            whileHover={{ y: -10 }} // Lifts the card
+                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                            className="group relative flex flex-col items-center justify-center p-8 h-64 bg-slate-900/40 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-primary hover:shadow-[0_0_20px_rgba(56,189,248,0.15)]"
                         >
-                            <div className="mb-4 p-4 bg-dark rounded-full group-hover:scale-110 transition-transform">
+                            {/* Icon Container */}
+                            <div className="mb-4 p-4 bg-dark rounded-xl text-slate-400 group-hover:text-primary group-hover:scale-110 transition-all duration-300">
                                 {method.icon}
                             </div>
+
                             <h3 className="text-slate-100 font-bold text-xl mb-1">{method.label}</h3>
-                            <p className="text-slate-400 mb-4">{method.value}</p>
-                            <span className="text-primary text-sm font-mono flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                                Follow link <ArrowUpRight size={14} />
-                            </span>
+                            <p className="text-slate-400 mb-6 text-center text-sm">{method.value}</p>
+
+                            {/* Follow Link Text - Absolutely positioned at the bottom to prevent layout shift */}
+                            <div className="absolute bottom-8 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                                <span className="text-primary text-xs font-mono flex items-center gap-1">
+                                    Follow link <ArrowUpRight size={14} />
+                                </span>
+                            </div>
                         </motion.a>
                     </Reveal>
                 ))}
@@ -62,7 +70,7 @@ const Contact = () => {
 
             <Reveal delay={0.4}>
                 <div className="mt-20 p-8 border border-dashed border-slate-800 rounded-2xl text-center">
-                    <p className="text-slate-500 italic">
+                    <p className="text-slate-500 italic text-sm md:text-base">
                         Open to discussing opportunities in distributed systems, machine learning, and cloud computing.
                     </p>
                 </div>

@@ -45,7 +45,7 @@ const Hero = () => {
                             className="text-2xl md:text-3xl font-semibold mb-6 text-slate-400"
                         >
                             MS Computer Science @ RIT <br className="hidden md:block" />
-                            <span className="text-slate-300">Aspiring SDE / MLE</span>
+                            <span className="text-slate-300">Software Development Engineer</span>
                         </motion.h2>
 
                         <motion.p

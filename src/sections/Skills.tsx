@@ -7,7 +7,7 @@ const Skills = () => {
         {
             title: "Languages",
             icon: <Code2 className="text-primary" size={24} />,
-            skills: ["Java", "Python", "C#", "JavaScript", "TypeScript", "C++"]
+            skills: ["Java", "Python", "C#", "JavaScript", "TypeScript"]
         },
         {
             title: "Frameworks & Libs",
@@ -39,7 +39,7 @@ const Skills = () => {
 
     return (
         <section id="skills" className="py-24 bg-slate-900/30 scroll-mt-20">
-            <div className="max-w-7xl mx-auto px-6 lg:px-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <SectionHeader title="Skills" />
 
                 {/* Responsive Grid: 1 col on mobile, 2 on tablet, 3 on desktop */}

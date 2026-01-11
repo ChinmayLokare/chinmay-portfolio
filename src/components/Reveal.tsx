@@ -11,7 +11,7 @@ export const Reveal = ({ children, width = "100%", delay = 0.2 }: Props) => {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
     return (
-        <div ref={ref} style={{ position: 'relative', width, overflow: 'hidden' }}>
+        <div ref={ref} style={{ position: 'relative', width }}>
             <motion.div
                 variants={{
                     hidden: { opacity: 0, y: 30 },

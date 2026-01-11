@@ -7,13 +7,14 @@ const Experience = () => {
         {
             role: "Research Assistant",
             company: "Rochester Institute of Technology",
-            period: "Aug 2024 - Present",
+            period: "Apr 2025 - Present",
             location: "Rochester, NY",
             bullets: [
-                "Developing distributed federated learning platform using Java, Spring Boot, and AWS EC2",
-                "Achieved 85.71% accuracy on CommitmentBank dataset, demonstrating effective privacy-preserving NLP",
-                "Architected gRPC-based communication system for model parameter aggregation across nodes",
-                "Optimized memory management and network protocols for efficient large-scale training"
+                "Designed and deployed a full-stack distributed federated learning platform that enables privacy-preserving model training across 10+ simulated clients without centralizing sensitive data",
+                "Built a scalable Java/Spring Boot backend with secure REST APIs capable of orchestrating 100+ concurrent training sessions simultaneously",
+                "Revolutionized deployment workflows by automating server-side setup on AWS EC2, slashing environment configuration time from several hours to under 2 minutes",
+                "Engineered a stateless JWT-based authentication layer that secures all API endpoints while boosting authenticated request response times by 40%",
+                "Implemented enterprise-grade resiliency patterns and security best practices to ensure high availability and data protection throughout the training lifecycle"
             ]
         },
         {
@@ -22,16 +23,17 @@ const Experience = () => {
             period: "Jul 2021 - Jul 2024 (3 years)",
             location: "India",
             bullets: [
-                "Developed large-scale telecommunications systems serving millions of users",
-                "Implemented microservices architecture using Java and Spring Boot framework",
-                "Mentored newly onboarded associates on software development best practices",
-                "Collaborated with cross-functional teams to deliver enterprise solutions"
+                "Led a 4-person development team through a complete frontend transformation, migrating a legacy CRM system from jQuery to ReactJS and achieving a 150% performance improvement",
+                "Designed and developed 5+ enterprise dashboards for a major telecom client, increasing order tracking efficiency by 30% and resolving 50+ UI/UX issues to enhance user satisfaction",
+                "Architected and optimized SQL-based data pipelines for a customer relationship management platform processing 1,000+ daily interactions with improved data accuracy",
+                "Accelerated overall project delivery by 35% by leveraging full-stack expertise (React, Node.js, Java) and championing Agile development methodologies",
+                "Collaborated with cross-functional teams to deliver secure, cloud-deployed applications while maintaining coding best practices and system reliability"
             ]
         }
     ];
 
     return (
-        <section id="experience" className="py-24 max-w-7xl mx-auto px-4">
+        <section id="experience" className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-20">
             <SectionHeader title="Experience" />
             <div className="space-y-12">
                 {experiences.map((exp, idx) => (
