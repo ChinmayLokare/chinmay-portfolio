@@ -88,7 +88,7 @@ const Projects = () => {
             title: "Federated Learning Platform",
             desc: "Distributed system for NLP tasks. Achieved 85.71% accuracy on CommitmentBank dataset with privacy-preserving model training across nodes.",
             tech: ["Java", "Spring Boot", "PyTorch", "gRPC", "AWS EC2"],
-            github: "#",
+            github: "https://github.com/Learning-Optimization-Group/FedLearn-Platform",
             // paper: "#",
             image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800"
         },

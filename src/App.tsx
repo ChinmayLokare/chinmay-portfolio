@@ -7,7 +7,6 @@ import Hero from './sections/Hero';
 import Footer from './components/Footer';
 
 // 2. Lazy load the rest to improve performance
-// NOTE: Make sure you removed the "import About from..." lines at the top
 const About = React.lazy(() => import('./sections/About'));
 const Skills = React.lazy(() => import('./sections/Skills'));
 const Projects = React.lazy(() => import('./sections/Projects'));
